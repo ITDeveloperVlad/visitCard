@@ -1,0 +1,32 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 25px;
+    font-weight: bold;
+    width: 25%;
+}
+
+.name-color {
+    color: #F87B31;
+}
+
+.caption {
+    width: 20%;
+}
+
+.info {
+    width: 20%;
+}
