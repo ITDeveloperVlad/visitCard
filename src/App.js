@@ -1,10 +1,12 @@
 import './App.css';
 import TitleHeader from './TitleHeader/TitleHeader';
+import MainCard from './MainCard/MainCard';
 
 function App() {
   return (
     <div className="App">
-      <TitleHeader />
+      <MainCard />
+      {/* <TitleHeader /> */}
     </div>
   );
 }
