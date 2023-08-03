@@ -1,17 +1,16 @@
 import { Card } from "antd";
-import mainImage from "../public/images/mainImage.png";
+import mainImg from "../../public/images/mainImg.png";
 import { AiFillSignal, AiFillStar, AiFillTrophy } from "react-icons/ai";
+import FormRecordCard from "../FormRecordCard/FormRecordCard";
 
 import styles from './MainCard.module.scss';
 
 const MainCard = () => {
     return (
-        <Card className={styles.cardContainer}
-        cover={
+        <Card className={styles.cardContainer} >
             <div className={styles.imgContainer}>
-                <img className={styles.img} src={mainImage} alt='фото тренера'/>
+                <img className={styles.img} src={mainImg} alt='фото тренера'/>
             </div>
-          }>
             <div className={styles.titleContainer}>
                 <span className={styles.titleBlock}>
                     <p>
@@ -58,6 +57,10 @@ const MainCard = () => {
                     </span>
                 </div>
             </div>
+            {/* <div className={styles.footer}>
+                hel
+            </div> */}
+            <FormRecordCard />
         </Card>
     )
 }

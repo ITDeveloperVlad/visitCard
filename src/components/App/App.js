@@ -1,6 +1,6 @@
 import './App.css';
-import TitleHeader from './TitleHeader/TitleHeader';
-import MainCard from './MainCard/MainCard';
+import TitleHeader from '../../TitleHeader/TitleHeader';
+import MainCard from '../MainCard/MainCard';
 
 function App() {
   return (
