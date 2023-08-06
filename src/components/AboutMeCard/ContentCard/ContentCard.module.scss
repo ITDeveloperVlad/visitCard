@@ -1,0 +1,18 @@
+@import '../../../styles/variables.module.scss';
+
+.container {
+    position: absolute;
+    right: 10%;
+    width: 40%;
+    z-index: 1;
+
+    p {
+        font-size: 2rem;
+        text-align: justify;
+        color: white;
+
+        b {
+            color: $orange;
+        }
+    }
+}

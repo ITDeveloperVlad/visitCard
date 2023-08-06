@@ -1,0 +1,13 @@
+@import '../../../styles/mixins.module.scss';
+
+.imgContainer {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+
+    img {
+        @include size(100%);
+    }
+}

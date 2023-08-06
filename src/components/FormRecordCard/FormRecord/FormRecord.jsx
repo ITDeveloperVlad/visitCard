@@ -12,21 +12,13 @@ const onFinish = (values) => {
 const FormRecord = () => {
     return (
         <div className={styles.containerForm}>
-            <h3>
+            <p className={styles.titleMain}>
                 Оставь заявку на бесплатную консультацию + диагностику
-            </h3>
+            </p>
 
             <Form
+                className={styles.form}
                 name="basic"
-                labelCol={{
-                    span: 8,
-                }}
-                wrapperCol={{
-                    span: 16,
-                }}
-                style={{
-                    maxWidth: 600,
-                }}
                 initialValues={{
                     remember: true,
                 }}
@@ -35,57 +27,59 @@ const FormRecord = () => {
                 autoComplete="off"
                 >
                 <Form.Item
-                    label="Username"
+                    name="surname"
+                    rules={[
+                    {
+                        required: true,
+                        message: 'Пожалуйста, введите вашу фамилию!',
+                    },
+                    ]}
+                >
+                    <Input className={styles.input} placeholder="Фамилия"/>
+                </Form.Item>
+
+                <Form.Item
                     name="username"
                     rules={[
                     {
                         required: true,
-                        message: 'Please input your username!',
+                        message: 'Пожалуйста, введите вашу фамилию!',
                     },
                     ]}
                 >
-                    <Input />
+                    <Input className={styles.input} placeholder="Имя"/>
                 </Form.Item>
 
                 <Form.Item
-                    label="Password"
-                    name="password"
+                    name="email"
                     rules={[
                     {
                         required: true,
-                        message: 'Please input your password!',
+                        message: 'Пожалуйста, введите ваш email!',
                     },
                     ]}
                 >
-                    <Input.Password />
+                    <Input className={styles.input} placeholder="Email"/>
                 </Form.Item>
 
                 <Form.Item
-                    name="remember"
-                    valuePropName="checked"
-                    wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                    }}
+                    name="number"
+                    rules={[
+                    {
+                        required: true,
+                        message: 'Пожалуйста, введите ваш номер телефона!',
+                    },
+                    ]}
                 >
-                    <Checkbox>Remember me</Checkbox>
+                    <Input className={styles.input} placeholder="Телефон"/>
                 </Form.Item>
 
-                <Form.Item
-                    wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                    }}
-                >
-                    <Button type="primary" htmlType="submit">
-                    Submit
+                <Form.Item>
+                    <Button type="primary" htmlType="submit" className={styles.btn}>
+                        Отправить заявку
                     </Button>
                 </Form.Item>
                 </Form>
-
-            <Button>
-                Записаться
-            </Button>
         </div>
     )
 }

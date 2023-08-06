@@ -1,0 +1,11 @@
+@import '../../styles/mixins.module.scss';
+@import '../../styles/variables.module.scss';
+
+.container {
+    @include flex(space-between, row);
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background-color: rgba(0,0,0, 0.9);
+    z-index: 1;
+}

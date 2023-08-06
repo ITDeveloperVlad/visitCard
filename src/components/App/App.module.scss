@@ -1,0 +1,7 @@
+@import '../../styles/mixins.module.scss';
+
+.app {
+    @include flex(flex-start, column);
+
+    gap: 5rem;
+}

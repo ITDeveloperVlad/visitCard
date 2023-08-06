@@ -1,0 +1,27 @@
+@import '../../../styles/variables.module.scss';
+
+.titleContainer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    p {
+        color: white;
+        text-align: left;
+        margin: -1rem auto;
+    }
+
+    .titleBlock {
+        font-size: 3rem;
+        font-weight: bolder;
+
+        .orangeText {
+            color: $orange;
+        }
+
+    }
+
+    .motivInfo > p {
+        margin-top: 1rem;
+    }
+}

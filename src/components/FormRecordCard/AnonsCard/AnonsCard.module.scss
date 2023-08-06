@@ -1,0 +1,64 @@
+@import '../../../styles/variables.module.scss';
+@import '../../../styles/mixins.module.scss';
+
+.container {
+    @include flex(flex-start, column);
+
+    width: 40%;
+    border-radius: $b-radius 0 0 $b-radius; 
+    height: 100%;
+
+    p {
+        color: white;
+    }
+
+    .titleMain {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .list {
+        @include flex(center, row);
+
+        width: 100%;
+
+        gap: 1rem;
+
+        flex-wrap: wrap;
+        list-style-type: none;
+        animation: show-on 1s ease both;
+
+        li {
+            @include flex(flex-start, row);
+
+            gap: 0.5rem;
+            width: 120px;
+
+            svg {
+                @include size(25px);
+                color: $orange;
+            }
+        }
+    }
+}
+
+@keyframes show-on {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+@mixin item($num) {
+    $waitTime: ($num)*0.5;
+    animation-delay: #{$waitTime}s;
+}
+
+@for $i from 1 through 7 {
+    .list:nth-child(#{$i}) {
+        @include item($i);
+    }
+}

@@ -1,12 +1,14 @@
-import './App.css';
+import styles from './App.module.scss';
 import TitleHeader from '../../TitleHeader/TitleHeader';
 import MainCard from '../MainCard/MainCard';
+import AboutMeCard from '../AboutMeCard/AboutMeCard';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <MainCard />
       {/* <TitleHeader /> */}
+      <AboutMeCard />
     </div>
   );
 }

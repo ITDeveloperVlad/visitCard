@@ -1,3 +1,39 @@
+@import '../AnonsCard/AnonsCard.module.scss';
+
 .containerForm {
-    width: 60%;
+    @include flex(flex-start, column);
+
+    height: 100%;
+    width: 50%;
+
+    .titleMain {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    p, label {
+        color: white !important;
+    }
+
+    input {
+        color: black !important;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1rem;
+
+        .input {
+            width: 200px;
+        }
+
+        .btn {
+            background-color: $orange;
+            width: 200%;
+            margin-left: 5%;
+        }
+
+    }
 }
