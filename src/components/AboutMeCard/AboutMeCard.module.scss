@@ -3,9 +3,16 @@
 
 .container {
     @include flex(space-between, row);
+
     position: relative;
     width: 100%;
     min-height: 80vh;
     background-color: rgba(0,0,0, 0.9);
     z-index: 1;
+
+    .widgetContainer {
+        position: absolute;
+        bottom: 10%;
+        left: 15%;
+    }
 }

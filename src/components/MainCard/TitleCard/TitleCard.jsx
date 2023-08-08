@@ -1,6 +1,8 @@
 import styles from './TitleCard.module.scss';
 import WidgetCard from "./WidgetCard/WidgetCard";
 
+import { WIDGETS_ITEMS } from '../constants/constants';
+
 const TitleCard = () => {
     return (
         <div className={styles.titleContainer}>
@@ -17,7 +19,7 @@ const TitleCard = () => {
                     РАБОТАЙТЕ БОЛЕЕ ЭФФЕКТИВНО, ЧЕМ КОГДА ЛИБО!
                 </p>
             </span>
-            <WidgetCard />
+            <WidgetCard widgets={WIDGETS_ITEMS}/>
         </div>
     )
 }

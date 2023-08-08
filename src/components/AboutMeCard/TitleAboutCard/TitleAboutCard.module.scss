@@ -5,12 +5,11 @@
     @include flex(space-between, row);
     position: absolute;
     top: 0;
-    left: 42%;
+    left: 50%;
     font-size: 3rem;
     font-weight: bolder;
     color: white;
     gap: 1rem;
-    opacity: 0.3;
 
     .orangeText {
         color: $orange;

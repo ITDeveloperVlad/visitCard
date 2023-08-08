@@ -1,0 +1,35 @@
+@import '../../../../../styles/mixins.module.scss';
+@import '../../../../../styles/variables.module.scss';
+
+.staticCard {
+    @include flex(flex-start, column);
+    gap: 2rem;
+    animation-duration: 3s;
+    animation-name: show-on;
+
+    p {
+        font-size: 2rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .icon {
+        color: $orange;
+    }
+    
+    .infoStatic {
+        font-size: 1rem;
+
+    }
+}
+
+@keyframes show-on {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }

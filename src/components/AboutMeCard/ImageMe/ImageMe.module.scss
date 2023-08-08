@@ -1,13 +1,21 @@
 @import '../../../styles/mixins.module.scss';
 
 .imgContainer {
+    @include size(200px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    width: 40%;
-    height: 100%;
     background-color: white;
     overflow: hidden;
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
 
     img {
-        @include size(100%);
+        width: auto;
+        height: 200%;
+        margin: -100px 0 0 -50px;
     }
 }
